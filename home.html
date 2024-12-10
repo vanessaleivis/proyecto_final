@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabla de Usuarios</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .nuevo-btn {
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container mt-5">
+    <div class="d-flex justify-content-between">
+      <button class="btn btn-primary nuevo-btn" data-bs-toggle="modal" data-bs-target="#nuevoRegistroModal">NUEVO REGISTRO</button>
+      <input type="button" value="Exit" class="btn btn-danger" onclick=logOut()>
+    </div>
+    <h1 id="bienvenido" class="text-center mt-3">Bienvenido</h1>
+    <table class="table table-striped mt-4">
+      <thead class="table-dark">
+        <tr>
+          <th>Nombre</th>
+          <th>Edad</th>
+          <th>Ciudad</th>
+          <th>Email</th>
+          <th>Telefono</th>
+          <th>Fecha de inicio</th>
+        </tr>
+      </thead>
+
+      <tbody id="data"></tbody>
+
+    </table>
+  </div>
+
+  <div class="modal fade" id="nuevoRegistroModal" tabindex="-1" aria-labelledby="nuevoRegistroModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="nuevoRegistroModalLabel">Nuevo Registro</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="name" class="form-label">Nombre</label>
+              <input type="text" class="form-control" id="name" placeholder="Ingrese el nombre" required>
+            </div>
+            <div class="mb-3">
+              <label for="age" class="form-label">Edad</label>
+              <input type="number" class="form-control" id="age" placeholder="Ingrese la edad" required>
+            </div>
+            <div class="mb-3">
+              <label for="city" class="form-label">Ciudad</label>
+              <input type="text" class="form-control" id="city" placeholder="Ingrese la ciudad" required>
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Correo Electrónico</label>
+              <input type="email" class="form-control" id="email" placeholder="Ingrese el correo electrónico" required>
+            </div>
+            <div class="mb-3">
+              <label for="phone" class="form-label">Teléfono</label>
+              <input type="tel" class="form-control" id="phone" placeholder="Ingrese el número de teléfono" required>
+            </div>
+            <div class="mb-3">
+              <label for="startdate" class="form-label">Fecha de Inicio</label>
+              <input type="date" class="form-control" id="startdate" required>
+            </div>
+            <button type="submit" class="btn btn-success w-100">Guardar</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/home.js"></script>
+  <script src="js/consulta.js" ></script>
+
+</body>
+</html>  
